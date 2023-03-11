@@ -60,10 +60,6 @@ header {
     padding-top: .5rem;
 }
 
-.nav ul li:last-child {
-    padding-bottom: .5rem;
-}
-
 .nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
@@ -92,4 +88,73 @@ header {
     width: 100%;
     background: var(--text);
     border-radius: 10px;
+}
+
+footer {
+    background: var(--bg-header);
+    color: var(--text);
+}
+
+.footer-logo, .socials, .subnav, .contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    width: 100%;
+}
+
+.footer-logo::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 90%;
+    bottom: -5px;
+    left: 5%;
+    background: hsla(0, 0%, 15%, .5);
+    border-radius: 1rem;
+}
+
+.footer-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.socials, .subnav, .contact {
+    flex-direction: column;
+}
+
+.socials h1, .subnav h1, .contact h1 {
+    margin: 1rem 0;
+    color: gray;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.socials i, .subnav i, .contact i {
+    position: absolute;
+    left: 0;
+    padding-left: 7rem;
+    padding-bottom: 8rem;
+    color: #fff;
+}
+
+.socials a, .subnav a, .contact a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+} 
+
+.copyright {
+    padding: .5rem;
+    text-align: right;
+    color: gray;
+    font-size: 10px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: gray;
+    text-transform: capitalize;
 }
