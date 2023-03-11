@@ -1,0 +1,95 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text: #fff;
+    --bg-header: #2b3034;
+    --black-withop: hsl(0, 0%, 0%, .5);
+}
+
+header {
+    height: 4rem;
+    width: 100%;
+    background: var(--bg-header);
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 100%;
+    width: 60px;
+    padding: .2rem;
+    margin-left: .5rem;
+}
+
+.name h1 {
+    font-size: 18px;
+    padding-top: 1.2rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.name h2 {
+    font: 16px normal;
+}
+
+.nav {
+    display: none;
+    position: absolute;
+    top: 4rem; right: 0;
+    background-color: var(--black-withop);
+    width: 50%;
+    border-bottom-left-radius: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav ul li {
+    padding-top: .5rem;
+}
+
+.nav ul li:last-child {
+    padding-bottom: .5rem;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--text);
+    padding: 2rem;
+}
+
+.active {
+    display: flex;
+}
+
+.toggle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    width: 25px;
+    height: 21px;
+}
+
+.toggle-btn .btn {
+    height: 3px; 
+    width: 100%;
+    background: var(--text);
+    border-radius: 10px;
+}
