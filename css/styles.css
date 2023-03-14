@@ -90,12 +90,12 @@ header {
     border-radius: 10px;
 }
 
-.hero {
+.hero, .summary, .newslatter {
     width: 100%;
     padding: 1rem;
 }
 
-.hero h3 {
+h3{
     text-align: center;
     font-size: 18px;
     font-weight: bolder;
@@ -104,11 +104,11 @@ header {
     padding-bottom: 1rem;
 }
 
-.hero img {
+img {
     width: 100%;
 }
 
-.hero p {
+.hero p, .summary p {
     padding: 1rem;
     text-align: center;
 }
@@ -123,6 +123,42 @@ header {
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: .7;
+}
+
+.newslatter {
+    background: palevioletred;
+}
+
+.newslatter img {
+    width: 25px;
+    height: 25px;
+}
+
+.newslatter p {
+    position: relative;
+    left: 45px;
+    top: -25px;
+}
+
+.newslatter input {
+    background: hsla(100, 100%, 100%, .2);
+    border: none;
+    border-bottom: 1px solid #2b3034;
+    border-top-left-radius: 1rem;
+    padding: .5rem;
+}
+
+.newslatter button {
+    border: none;
+    background: hsla(100, 100%, 100%, .2);
+    padding: .5rem;
+    border-top-right-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+    right: 4px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2b3034;
+    font-weight: bolder;
 }
 
 footer {
