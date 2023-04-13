@@ -19,35 +19,59 @@ header {
     color: var(--text);
 }
 
+.toggle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    width: 25px;
+    height: 21px;
+    margin-left: .8rem;
+}
+
+.toggle-btn .btn {
+    height: 3px; 
+    width: 100%;
+    background: var(--text);
+    border-radius: 10px;
+}
+
 .logo {
     display: flex;
 }
 
 .logo img {
-    height: 100%;
+    height: 90%;
     width: 60px;
     padding: .2rem;
-    margin-left: .5rem;
 }
 
 .name h1 {
-    font-size: 18px;
-    padding-top: 1.2rem;
+    font-size: 16px;
+    padding-top: .9rem;
     text-transform: capitalize;
     font-weight: bolder;
 }
 
 .name h2 {
-    font: 16px normal;
+    font: 14px normal;
+}
+
+.user {
+    margin-top: 1.2rem;
+    color: white;
+    margin-right: 1.5rem;
 }
 
 .nav {
     display: none;
     position: absolute;
-    top: 4rem; right: 0;
+    top: 4rem; left: 0;
     background-color: var(--black-withop);
     width: 50%;
-    border-bottom-left-radius: 10px;
+    height: 100%;
+    animation: 5s  ease-in left;
+    transition-duration: 5s;
 }
 
 .nav ul {
@@ -70,24 +94,6 @@ header {
 
 .active {
     display: flex;
-}
-
-.toggle-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 1.4rem;
-    right: 01rem;
-    width: 25px;
-    height: 21px;
-}
-
-.toggle-btn .btn {
-    height: 3px; 
-    width: 100%;
-    background: var(--text);
-    border-radius: 10px;
 }
 
 .hero, .summary{
@@ -229,4 +235,38 @@ footer {
     text-decoration: none;
     color: gray;
     text-transform: capitalize;
+}
+
+@media (min-width: 1000px) {
+    .toggle-btn {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 2rem;
+    }
+
+    .nav {
+        display: inline-block;
+        top: 0;
+        z-index: 100;
+        background: none;
+        text-align: right;
+        margin-top: 1rem;
+        margin-left: 50rem;
+    }
+
+    .nav ul {
+        flex-direction: row;
+        gap: .1px;
+    }
+
+    .nav a:hover {
+        color: palevioletred;
+    }
+
+    footer .wrap {
+        display: flex;
+        
+    }
 }
