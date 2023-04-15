@@ -265,8 +265,36 @@ footer {
         color: palevioletred;
     }
 
-    footer .wrap {
-        display: flex;
-        
+    .wrap {
+        display: flex;        
     }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero h3 {
+        font-size: 26px;
+        padding-bottom: 2rem;
+    }
+
+    section .wrap{
+        justify-content: center;
+    }
+    section p, section button {
+        position: absolute
+    }
+
+    section p {
+        left: 0;
+    }
+
+    button {
+        display: none;
+    }
+
+    section img{
+        width: 50%;
+    }
+
 }
