@@ -279,9 +279,9 @@ footer {
     }
 
     section .wrap{
-        justify-content: center;
+        justify-content: right;
     }
-    section p, section button {
+    section p, section button, .hero button {
         position: absolute
     }
 
@@ -289,8 +289,8 @@ footer {
         left: 0;
     }
 
-    button {
-        display: none;
+    .hero button {
+        left: 0;
     }
 
     section img{
