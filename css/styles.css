@@ -96,17 +96,20 @@ header {
     display: flex;
 }
 
-.hero, .summary{
+.hero, .services{
     width: 100%;
     padding: 1rem;
 }
 
-h3{
+.hero img {
+    border-radius: 1rem;
+}
+
+.hero h3{
     text-align: center;
     font-size: 18px;
     font-weight: bolder;
     text-transform: uppercase;
-    text-decoration: underline;
     padding-bottom: 1rem;
 }
 
@@ -114,40 +117,41 @@ img {
     width: 100%;
 }
 
-.hero p, .summary p {
+.hero p {
     padding: 1rem;
     text-align: center;
 }
 
+.t {
+    display: none;
+}
+
 .hero button {
-    padding: .5rem;
-    border-radius: .4rem;
-    background: purple;
+    position: absolute;
+    padding: 1rem;
+    background: var(--bg-header);
     color: white;
     margin-left: 7rem;
     text-transform: uppercase;
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    opacity: .7;
+    cursor: pointer;
 }
 
-.newslatter {
-    background: palevioletred;
-    padding: 1rem;
-}
-
-.newslatter img {
-    width: 25px;
-    height: 25px;
-}
-
-.newslatter p {
+.hero button::before {
     position: relative;
-    left: 45px;
-    top: -25px;
+    content: ' ';
+    height: 3rem;
+    width: 1.5rem;
+    background: purple;
 }
 
-.newslatter input {
+.services {
+    background: #f1f1f1;
+    margin-top: 4rem;
+}
+
+.latter input {
     background: hsla(100, 100%, 100%, .2);
     border: none;
     border-bottom: 1px solid #2b3034;
@@ -155,7 +159,7 @@ img {
     padding: .5rem;
 }
 
-.newslatter button {
+.latter button {
     border: none;
     background: hsla(100, 100%, 100%, .2);
     padding: .5rem;
@@ -182,6 +186,13 @@ footer {
     width: 100%;
 }
 
+.latter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
 .footer-logo::after {
     position: absolute;
     content: '';
@@ -202,7 +213,7 @@ footer {
     flex-direction: column;
 }
 
-.socials h1, .subnav h1, .contact h1 {
+.socials h1, .subnav h1, .contact h1, .latter h1 {
     margin: 1rem 0;
     color: gray;
     text-transform: capitalize;
@@ -246,6 +257,11 @@ footer {
         margin-left: 2rem;
     }
 
+    header {
+        position: fixed;
+        z-index: 1000;
+    }
+
     .nav {
         display: inline-block;
         top: 0;
@@ -269,27 +285,43 @@ footer {
         display: flex;        
     }
 
+    section .wrap{
+        justify-content: right;
+    }
+
+    section p, section button, .hero button, .hero h3 {
+        position: absolute
+    }
+
     .hero {
+        position: relative;
         width: 100%;
+        top: 5rem;
     }
 
     .hero h3 {
         font-size: 26px;
-        padding-bottom: 2rem;
+        margin-top: 9rem;
+        left: 3rem;        
     }
 
-    section .wrap{
-        justify-content: right;
-    }
-    section p, section button, .hero button {
-        position: absolute
+    .hero img {
+        height: 70vh;
+        padding-right: 1rem;
+        border-radius: 2rem;
     }
 
-    section p {
-        left: 0;
+    .hero p {
+        top: 15rem;
+        padding: 0 3rem;
     }
 
     .hero button {
+        left: 6rem;
+        top: 21rem;
+    }
+
+    section p {
         left: 0;
     }
 
@@ -297,4 +329,11 @@ footer {
         width: 50%;
     }
 
+    .services, .sponsors, footer {
+        display: none;
+    }
+    
+    .t {
+        display: inline-block;
+    }
 }
