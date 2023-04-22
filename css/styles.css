@@ -96,7 +96,7 @@ header {
     display: flex;
 }
 
-.hero, .services{
+.hero, .services {
     width: 100%;
     padding: 1rem;
 }
@@ -119,36 +119,32 @@ img {
 
 .hero p {
     padding: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 .t {
     display: none;
 }
 
-.hero button {
+.hero button, .donation_btn button {
     position: absolute;
-    padding: 1rem;
+    padding: .8rem;
     background: var(--bg-header);
     color: white;
     margin-left: 7rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
 }
 
-.hero button::before {
-    position: relative;
-    content: ' ';
-    height: 3rem;
-    width: 1.5rem;
+.hero button:hover, .hero button:focus, .donation_btn button:hover {
     background: purple;
 }
 
 .services {
     background: #f1f1f1;
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -174,6 +170,68 @@ img {
     padding-bottom: .3rem;
 }
 
+.cards p {
+    padding-left: .5rem;
+}
+
+.sponsors {
+    height: 9rem;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.sponsors .donation_btn {
+    padding: 1rem 0;
+}
+
+.sponsors h1 {
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+.sponsors .logos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sponsors i {
+    font-size: 32px;
+}
+
+.contact_form {
+    background: #f1f1f1;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contact_form h1 {
+    padding-bottom: 1rem;
+}
+
+.contact_form  input, textarea {
+    padding: .3rem;
+    opacity: .5;
+    border: none;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    font-weight: bolder;
+}
+
+.contact_form input[type="text"] {
+    width: 150px;
+}
+
+.contact_form input[type="email"] {
+    margin: 1rem 0;
+    width: 300px;
+}
+
 .latter input {
     background: hsla(100, 100%, 100%, .2);
     border: none;
@@ -189,7 +247,7 @@ img {
     border-top-right-radius: 1rem;
     position: relative;
     cursor: pointer;
-    right: 4px;
+    right: .2px;
     text-transform: uppercase;
     border-bottom: 1px solid #2b3034;
     font-weight: bolder;
