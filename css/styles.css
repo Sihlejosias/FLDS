@@ -438,4 +438,36 @@ footer {
     .services .cards h3 {
         font-size: 20px;
     }
+
+    .sponsors h1 {
+        text-align: center;
+    }
+
+    .sponsors .wrapp{
+        display: flex;
+        height: 80%;
+    }
+
+    .sponsors .logos {
+        width: 50%;
+        border-right: 1px solid gray;
+    }
+
+    .sponsors .logos i {
+        position: relative;
+        top: 40%;
+    }
+
+    .sponsors .donation_btn {
+        width: 50%;
+    }
+
+    .sponsors .donation_btn button {
+        border-radius: 1rem;
+    }
+
+    .contact_form {
+        align-items: normal;
+        padding-left: 4rem;
+    }
 }
