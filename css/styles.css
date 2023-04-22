@@ -63,6 +63,10 @@ header {
     margin-right: 1.5rem;
 }
 
+.user i {
+    font-size: 25px;
+}
+
 .nav {
     display: none;
     position: absolute;
@@ -232,6 +236,15 @@ img {
     width: 300px;
 }
 
+.contact_form input[type="submit"] {
+    margin-top: 1rem;
+    position: relative;
+    left: 7rem;
+    border: 1px solid black;
+    background: hsla(100, 100%, 100%, .5);
+    padding: .5rem;
+}
+
 .latter input {
     background: hsla(100, 100%, 100%, .2);
     border: none;
@@ -248,7 +261,7 @@ img {
     position: relative;
     cursor: pointer;
     right: .2px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     border-bottom: 1px solid #2b3034;
     font-weight: bolder;
 }
@@ -306,7 +319,6 @@ footer {
     position: absolute;
     left: 0;
     padding-left: 7rem;
-    padding-bottom: 8rem;
     color: #fff;
 }
 
@@ -409,10 +421,6 @@ footer {
     section img{
         width: 50%;
     }
-
-    /* .services, .sponsors, footer {
-        display: none;
-    } */
     
     .t {
         display: inline-block;
