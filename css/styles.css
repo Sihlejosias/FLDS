@@ -378,11 +378,11 @@ footer {
         display: flex;        
     }
 
-    section .wrap{
+    .hero .wrap{
         justify-content: right;
     }
 
-    section p, section button, .hero button, .hero h3 {
+    .hero p, .hero button, .hero button, .hero h3 {
         position: absolute
     }
 
@@ -414,15 +414,28 @@ footer {
         top: 21rem;
     }
 
-    section p {
+    .hero p {
         left: 0;
     }
 
-    section img{
+    .hero img{
         width: 50%;
     }
     
     .t {
         display: inline-block;
+    }
+
+    .services {
+        margin-top: 5rem;
+        padding: 0 6rem;
+    }
+
+    .services .cards i {
+        font-size: 42px;
+    }
+
+    .services .cards h3 {
+        font-size: 20px;
     }
 }
