@@ -220,7 +220,7 @@ img {
 
 .contact_form  input, textarea {
     padding: .3rem;
-    opacity: .5;
+    opacity: .8;
     border: none;
     text-transform: capitalize;
     border-radius: .5rem;
@@ -239,25 +239,25 @@ img {
 .contact_form input[type="submit"] {
     margin-top: 1rem;
     position: relative;
-    left: 7rem;
+    /* left: 7rem; */
     border: 1px solid black;
-    background: hsla(100, 100%, 100%, .5);
+    background: hsla(100, 100%, 100%, .8);
     padding: .5rem;
 }
 
 .latter input {
-    background: hsla(100, 100%, 100%, .2);
+    background:  white;
     border: none;
     border-bottom: 1px solid #2b3034;
-    border-top-left-radius: 1rem;
+    border-top-left-radius: .4rem;
     padding: .5rem;
 }
 
 .latter button {
     border: none;
-    background: hsla(100, 100%, 100%, .2);
+    background: purple;
     padding: .5rem;
-    border-top-right-radius: 1rem;
+    border-top-right-radius: .4rem;
     position: relative;
     cursor: pointer;
     right: .2px;
@@ -346,6 +346,17 @@ footer {
         display: none;
     }
 
+    .hero {
+        height: 80vh;
+        background-image: url(./../assets/JJF.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        top: 4rem;
+    }
+
     .logo {
         margin-left: 2rem;
     }
@@ -386,11 +397,6 @@ footer {
         position: absolute
     }
 
-    .hero {
-        position: relative;
-        width: 100%;
-        top: 5rem;
-    }
 
     .hero h3 {
         font-size: 26px;
@@ -407,19 +413,12 @@ footer {
     .hero p {
         top: 15rem;
         padding: 0 3rem;
+        left: 0;
     }
 
     .hero button {
         left: 6rem;
         top: 21rem;
-    }
-
-    .hero p {
-        left: 0;
-    }
-
-    .hero img{
-        width: 50%;
     }
     
     .t {
@@ -427,8 +426,17 @@ footer {
     }
 
     .services {
+        flex-direction: column;
         margin-top: 5rem;
         padding: 0 6rem;
+    }
+    .services .wrapp {
+        display: flex;
+        flex-direction: row;
+    }
+    .services h1 {
+        text-align: center;
+        padding: 1rem;
     }
 
     .services .cards i {
@@ -464,6 +472,10 @@ footer {
 
     .sponsors .donation_btn button {
         border-radius: 1rem;
+    }
+
+    .donation_btn .btn {
+        right: 12rem;
     }
 
     .contact_form {
