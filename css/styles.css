@@ -411,14 +411,19 @@ footer {
     }
 
     .hero p {
-        top: 15rem;
-        padding: 0 3rem;
+        top: 10rem;
+        padding: 2rem;
+        padding-left: 6rem;
         left: 0;
+        background: purple;
+        font-size: 17px;
+        color: white;
     }
 
     .hero button {
-        left: 6rem;
-        top: 21rem;
+        left: 2rem;
+        top: 23rem;
+        padding: .8rem 6rem;
     }
     
     .t {
