@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | I Am Future Leader Youth</title>
+    <title>Homepage | FLDS</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
-
 <body>
-    <header>
+
+    <header class="header">
         <a href="#" class="toggle-btn">
             <span class="btn"></span>
             <span class="btn"></span>
             <span class="btn"></span>
-        </a>
+        </a> 
         <div class="logo">
             <img src="./assets/logo.gif" alt="FLDS Logo">
             <div class="name">
@@ -23,141 +23,141 @@
                 <h2>Young development programe</h2>
             </div>
         </div>
-        
         <div class="nav">
             <ul>
                 <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about <i class="fas fa-caret-down"></i></a></li>
-                <li><a href="projects.html">Projects   <i class="fas fa-caret-down"></i></a></li>
+                <li><a href="#" class="bbtn">about <i class="fas fa-chevron-down"></i></a>
+                    <ul class="about-subnav">
+                        <li><a href="">Test one</a></li>
+                        <li><a href="">Test Two</a></li>
+                        <li><a href="">Text Three</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="pbtn">Projects   <i class="fas fa-chevron-down"></i></a>
+                    <ul class="projects-subnav">
+                        <li><a href="">Test one</a></li>
+                        <li><a href="">Test Two</a></li>
+                        <li><a href="">Text Three</a></li>
+                    </ul>
+                </li>
                 <li style="padding-bottom: .5rem;"><a href="contact.html">contact us</a></li>
 
                 <li hidden><a href="register"><i class="fas pen"></i> contact us</a></li>
             </ul>
         </div>
-        <a href="login.html" class="user"><i class="fas fa-circle-user"></i></a>
+        <a href="login.html" class="user"><i class="fas fa-circle-user"></i></a> 
+        <div class="login">
+            <div class="wrap">
+                <h1>Login</h1>
+
+                <form action="#" method="post">
+                    <input type="text" name="username" placeholder="username/Email"><br>
+
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <div class="hero">
-            <div class="wrap">
-                <div class="container">
-                    <p>
-                        the importance of education through career development sessions, <br class="t">
-                        encourages constructive social engagement, for <br class="t"> High School learners residing in rural
-                    </p>
-                </div>
-
-                <button>Join us</button>
+    <main class="body">
+        <section class="hero">
+            <div class="intro">
+                <p>The importance of education through career development sessions,
+                encourages constructive social engagement, for
+                High School learners residing in rural</p>
             </div>
-            
-        </div>
-        
-        <div class="services">
-            <h1>our Portfolio</h1>
-            <div class="wrapp">
-                <div class="cards">
+            <div class="btn">
+                <button>Join Us</button>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h1>Our Portfolio</h1>
+
+            <div class="cards">
+                <div class="card">
                     <i class="fas fa-award"></i>
-                    <h3>Awards</h3>
+                    <h1>Awards</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <div class="cards">
+                <div class="card">
                     <i class="fas fa-user-doctor"></i>
-                    <h3>Expos</h3>
+                    <h1>Expos</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
-                <div class="cards">
+                <div class="card">
                     <i class="fas fa-seedling"></i>
-                    <h3>Growth</h3>
+                    <h1>Growth</h1>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="sponsors">
+        <section class="sponsor">
             <h1>Our Sponsors</h1>
-            <div class="wrapp">
-                <div class="logos">
+            <div class="wrap">
+                <div class="advert">
                     <i class="fab fa-google"></i>
                     <i class="fab fa-amazon"></i>
                     <i class="fab fa-dropbox"></i>
                     <i class="fab fa-windows"></i>
                     <i class="fab fa-airbnb"></i>
                 </div>
-                <div class="donation_btn">
+                <div class="donation-btn">
                     <button>Become a Sponsor</button>
-                    <button class="btn">Make a Donation</button>
+                    <button>Make a Donation</button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact_form">
+        <div class="contact">
             <h1>Contact Us</h1>
-            <form action="#" method="post">
-                <input required type="text" name="name" placeholder="First Name">
-                <input required type="text" name="surname" placeholder="Last Name"> <br>
-                <input required type="email" name="email" placeholder="Email Address"> <br>
-                <textarea name="Message" id="message" placeholder="Message" cols="36" rows="5"></textarea> <br>
-                <input type="submit" value="Send">
-            </form>
-        </div>
-        
-    </section>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="./assets/logo.gif" alt="FLDS Logo">
-            <div class="name">
-                <h1 style="padding-left: .5rem;">I am future leader</h1>
-                <h2 style="padding-left: .5rem;">Youth Development programe</h2>
-            </div>
+            <input type="text" name="name" id="" placeholder="First Name">
+            <input type="text" name="surname" id="" placeholder="Last Name">
+            <input type="email" name="email" id="" placeholder="Email Address">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <button>Sent</button>
         </div>
+    </main>
 
-        <div class="wrap">
-            <div class="socials">
-                <h1>Media Links</h1>
-    
-                <a href="#"> Linkedin</a>
-                <a href="#"> Facebook</a>
-                <a href="#"> Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-    
-            <div class="subnav">
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="navigation">
                 <h1>Navigation</h1>
-    
-                <a href="">Home</a>
-                <a href=""> Projects</a>
-                <a href=""> Resources</a>
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
             </div>
-    
+            <div class="media">
+                <h1>Media Links</h1>
+
+                <ul>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
             <div class="contact">
-                <h1>Locate Us</h1>
-    
-                <a href="#"> Contact Us</a>
+                <h1>Locate us</h1>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+
                 <address>
-                    144 J.B Marks,
-                    bowelr <br>
-                    Durban,
-                    4001 <br>
+                    144 J.B Markes, 
+                    Durban
+                    4001
                 </address>
             </div>
-
-            <div class="latter">
-                <!-- <h1>Newslater</h1> -->
-                <input type="email" placeholder="yourname@example.co.za">
-                <button>Subscribe</button>
-            </div>
-
         </div>
-        <div class="copyright">
-            2023 &copy; All Rights Reserved. <a href="#">
-            <a href="#">Privacy</a> | 
-            <a href="#">Terms of use</a>
-        </div>
-        
+        <span>2023 &copy; All Rights Reserved. <a href="#">Privacy</a> | <a href="#"></a>Terms of Use</span>
     </footer>
 
     <script src="./js/main.js"></script>
 </body>
-
 </html>

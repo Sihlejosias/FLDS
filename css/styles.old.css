@@ -1,0 +1,490 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text: #fff;
+    --bg-header: #2b3034;
+    --black-withop: hsl(0, 0%, 0%, .5);
+}
+
+header {
+    height: 4rem;
+    width: 100%;
+    background: var(--bg-header);
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+}
+
+.toggle-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    width: 25px;
+    height: 21px;
+    margin-left: .8rem;
+}
+
+.toggle-btn .btn {
+    height: 3px; 
+    width: 100%;
+    background: var(--text);
+    border-radius: 10px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 90%;
+    width: 60px;
+    padding: .2rem;
+}
+
+.name h1 {
+    font-size: 16px;
+    padding-top: .9rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.name h2 {
+    font: 14px normal;
+}
+
+.user {
+    margin-top: 1.2rem;
+    color: white;
+    margin-right: 1.5rem;
+}
+
+.user i {
+    font-size: 25px;
+}
+
+.nav {
+    display: none;
+    position: absolute;
+    top: 4rem; left: 0;
+    background-color: var(--black-withop);
+    width: 50%;
+    height: 100%;
+    animation: 5s  ease-in left;
+    transition-duration: 5s;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav ul li {
+    padding-top: .5rem;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--text);
+    padding: 2rem;
+}
+
+.active {
+    display: flex;
+}
+
+.hero, .services {
+    width: 100%;
+    padding: 1rem;
+}
+
+.hero img {
+    border-radius: 1rem;
+}
+
+.hero h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+.hero p {
+    padding: 1rem;
+    text-align: left;
+}
+
+.t {
+    display: none;
+}
+
+.hero button, .donation_btn button {
+    position: absolute;
+    padding: .8rem;
+    background: var(--bg-header);
+    color: white;
+    margin-left: 7rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.hero button:hover, .hero button:focus, .donation_btn button:hover {
+    background: purple;
+}
+
+.services {
+    background: #f1f1f1;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards {
+    padding: 1.5rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.cards i {
+    padding-bottom: .5rem;
+    font-size: 28px;
+}
+
+.cards h3 
+{
+    font-size: 14px;
+    padding-bottom: .3rem;
+}
+
+.cards p {
+    padding-left: .5rem;
+}
+
+.sponsors {
+    height: 9rem;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.sponsors .donation_btn {
+    padding: 1rem 0;
+}
+
+.sponsors h1 {
+    font-size: 18px;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+.sponsors .logos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sponsors i {
+    font-size: 32px;
+}
+
+.contact_form {
+    background: #f1f1f1;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contact_form h1 {
+    padding-bottom: 1rem;
+}
+
+.contact_form  input, textarea {
+    padding: .3rem;
+    opacity: .8;
+    border: none;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    font-weight: bolder;
+}
+
+.contact_form input[type="text"] {
+    width: 150px;
+}
+
+.contact_form input[type="email"] {
+    margin: 1rem 0;
+    width: 300px;
+}
+
+.contact_form input[type="submit"] {
+    margin-top: 1rem;
+    position: relative;
+    /* left: 7rem; */
+    border: 1px solid black;
+    background: hsla(100, 100%, 100%, .8);
+    padding: .5rem;
+}
+
+.latter input {
+    background:  white;
+    border: none;
+    border-bottom: 1px solid #2b3034;
+    border-top-left-radius: .4rem;
+    padding: .5rem;
+}
+
+.latter button {
+    border: none;
+    background: purple;
+    padding: .5rem;
+    border-top-right-radius: .4rem;
+    position: relative;
+    cursor: pointer;
+    right: .2px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #2b3034;
+    font-weight: bolder;
+}
+
+footer {
+    background: var(--bg-header);
+    color: var(--text);
+}
+
+.footer-logo, .socials, .subnav, .contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    width: 100%;
+}
+
+.latter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.footer-logo::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 90%;
+    bottom: -5px;
+    left: 5%;
+    background: hsla(0, 0%, 15%, .5);
+    border-radius: 1rem;
+}
+
+.footer-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.socials, .subnav, .contact {
+    flex-direction: column;
+}
+
+.socials h1, .subnav h1, .contact h1, .latter h1 {
+    margin: 1rem 0;
+    color: gray;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.socials i, .subnav i, .contact i {
+    position: absolute;
+    left: 0;
+    padding-left: 7rem;
+    color: #fff;
+}
+
+.socials a, .subnav a, .contact a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+} 
+
+.copyright {
+    padding: .5rem;
+    text-align: right;
+    color: gray;
+    font-size: 10px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: gray;
+    text-transform: capitalize;
+}
+
+@media (min-width: 1000px) {
+    .toggle-btn {
+        display: none;
+    }
+
+    .hero {
+        height: 80vh;
+        background-image: url(./../assets/JJF.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        top: 4rem;
+    }
+
+    .logo {
+        margin-left: 2rem;
+    }
+
+    header {
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .nav {
+        display: inline-block;
+        top: 0;
+        z-index: 100;
+        background: none;
+        text-align: right;
+        margin-top: 1rem;
+        margin-left: 50rem;
+    }
+
+    .nav ul {
+        flex-direction: row;
+        gap: .1px;
+    }
+
+    .nav a:hover {
+        color: palevioletred;
+    }
+
+    .wrap {
+        display: flex;        
+    }
+
+    .hero .wrap{
+        justify-content: right;
+    }
+
+    .hero p, .hero button, .hero button, .hero h3 {
+        position: absolute
+    }
+
+
+    .hero h3 {
+        font-size: 26px;
+        margin-top: 9rem;
+        left: 3rem;        
+    }
+
+    .hero img {
+        height: 70vh;
+        padding-right: 1rem;
+        border-radius: 2rem;
+    }
+
+    .hero p {
+        top: 10rem;
+        padding: 2rem;
+        padding-left: 6rem;
+        left: 0;
+        background: purple;
+        font-size: 17px;
+        color: white;
+    }
+
+    .hero button {
+        left: 2rem;
+        top: 23rem;
+        padding: .8rem 6rem;
+    }
+    
+    .t {
+        display: inline-block;
+    }
+
+    .services {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 0 6rem;
+    }
+    .services .wrapp {
+        display: flex;
+        flex-direction: row;
+    }
+    .services h1 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .services .cards i {
+        font-size: 42px;
+    }
+
+    .services .cards h3 {
+        font-size: 20px;
+    }
+
+    .sponsors h1 {
+        text-align: center;
+    }
+
+    .sponsors .wrapp{
+        display: flex;
+        height: 80%;
+    }
+
+    .sponsors .logos {
+        width: 50%;
+        border-right: 1px solid gray;
+    }
+
+    .sponsors .logos i {
+        position: relative;
+        top: 40%;
+    }
+
+    .sponsors .donation_btn {
+        width: 50%;
+    }
+
+    .sponsors .donation_btn button {
+        border-radius: 1rem;
+    }
+
+    .donation_btn .btn {
+        right: 12rem;
+    }
+
+    .contact_form {
+        align-items: normal;
+        padding-left: 4rem;
+    }
+}
