@@ -6,20 +6,32 @@
 
 :root {
     --text: #fff;
-    --bg-header: #2b3034;
+    --bg-header: hsl(207, 9%, 19%);
     --black-withop: hsl(0, 0%, 0%, .7);
-    --puple: purple;
+    --puple: hsla(282, 80%, 63%, .9);
+}
+
+.nav, .login, .wrap input[type="text"]::after {
+    position: absolute;
+}
+
+.portfolio, header, .logo, .login, .hero, .news, .sponsor, .contact, footer, .portfolio .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     position: sticky;
+    top: 0;
+    z-index: 1;
     height: 4rem;
     width: 100%;
     background-color: var(--bg-header);
-    display: flex;
     padding: 1rem;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     color: white;
 }
 
@@ -40,7 +52,7 @@ header {
 }
 
 .logo {
-    display: flex;
+    flex-direction: row;
 }
 
 .logo img {
@@ -68,16 +80,19 @@ header {
     color: white;
 }
 
+.hero .btn {
+    position: relative;
+    top: 2rem;
+}
+
 .nav {
     display: none;
-    position: absolute;
     top: 4rem; left: 0;
     width: 50%;
     height: 100vh;
     background: var(--black-withop);
     padding: 1rem 2rem;
-    z-index: 1000;
-    transition: linear 50s ease-in;
+    transform: all 1s ease-in;
 }
 
 .nav ul {
@@ -110,18 +125,16 @@ header {
 
 .active {
     display: inline-block;
+    transform: translateX(0) 1s ease-in;
 }
 
 .login {
-    position: absolute;
     top: 4rem; left: 0;
     width: 100%;
     height: 90vh;
     background: hsl(0, 0%, 0%, .5);
-    display: none;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
 
 .wrap {
@@ -147,7 +160,6 @@ header {
 }
 
 .wrap input[type="text"]::after {
-    position: absolute;
     left: 0; top: 0;
     content: ' ';
     height: 2rem;
@@ -167,22 +179,95 @@ header {
 
 .hero {
     height: 50vh;
-    background-image: url("/assets/JJF.jpg");
+    background-image: url("/assets/back.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0 1.5rem 0 0;
 }
 
-.intro {
+.intro p {
     background: var(--puple);
     color: var(--text);
     padding: 1rem;
     text-align: left;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+}
+
+.hero button {
+    border: none;
+    background: hsla(207, 9%, 19%, 1);
+    padding: 1rem 2.5rem;
+    font-weight: bolder;
+    color: var(--text);
+    border-radius: .5rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 0px 1px var(--puple);
+}
+
+.portfolio, .news, .sponsor, .contact, footer {
+    padding: 1.5rem;
+}
+
+.portfolio h1, .news h1, .sponsor h1, .contact h1 {
+    font-size: 22px;
+    padding-bottom: 2rem;
+}
+
+.portfolio, .sponsor {
+    background: #f1f1f1;
+}
+
+.portfolio .cards {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.portfolio .cards .card {
+    text-align: center;
+}
+
+.portfolio .cards .card i {
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+.portfolio .cards .card h2 {
+    font-size: 18px;
+    padding: .5rem;
+}
+
+.portfolio .cards .card p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.news-banner {
+    width: 100%;
+    row-gap: 1rem;
+}
+
+.news .news-banner .ban img {
+    width: 300px;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.news .news-banner .ban h2 {
+    padding: .3rem .2rem;
+    font-size: 18px;
+}
+
+.news .news-banner .ban p {
+    font-size: 12px;
+    padding: .2rem .8rem;
+}
+
+.news .news-banner .ban a {
+    position: relative;
+    right: -200px;
+    padding-bottom: .5rem;
+    text-decoration: none;
+    font-size: 14px;
 }
