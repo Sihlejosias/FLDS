@@ -1,15 +1,10 @@
-var togglebtn = document.getElementsByClassName("toggle-btn")[0];
-var aboutbtn = document.getElementsByClassName("bbtn")[0];
-var projectsbtn = document.getElementsByClassName("pbtn")[0];
-var menu = document.getElementsByClassName("nav")[0];
-var about = document.getElementsByClassName("about-subnav")[0];
-var projects = document.getElementsByClassName("projects-subnav")[0];
-togglebtn.addEventListener("click", function () {
-    menu.classList.toggle("active");
+var toggleButton = document.getElementsByClassName('toggle-btn')[0];
+var navlinks = document.getElementsByClassName('navbar-links')[0];
+var dropDown = document.getElementsByClassName('open')[0];
+var dropDown_menu = document.getElementsByClassName('dropdowns')[0];
+toggleButton.addEventListener('click', function () {
+    navlinks.classList.toggle('active');
 });
-aboutbtn.addEventListener("click", function () {
-    about.classList.toggle("active");
-});
-projectsbtn.addEventListener("click", function () {
-    projects.classList.toggle("active");
+dropDown.addEventListener('click', function () {
+    dropDown_menu.classList.toggle('active');
 });

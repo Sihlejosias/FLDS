@@ -1,0 +1,349 @@
+*, *::before, *::after {padding: 0; margin: 0; box-sizing: border-box;}
+
+:root {
+    --text: #fff;
+    --bg-header: hsl(207, 9%, 19%);
+    --black-withop: hsl(0, 0%, 0%, .7);
+    --puple: hsla(282, 80%, 63%, .9);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-header);
+    color: var(--text);
+}
+
+.title {
+    margin: 1rem 1.5rem;
+    display: flex;
+}
+
+.title img {
+    width: 50px;
+    height: 50px;
+}
+
+.name {
+    padding: 0 .5rem;
+    margin: .7rem 0;
+}
+
+.name h1 {
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.name h2 {
+    font: 12px normal;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 2rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background: hsla(300, 100%, 25%, .5);
+    border-radius: 1rem;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-btn .bar {
+    background-color: var(--text);
+    border-radius: 10px;
+    height: 3px;
+    width: 100%;
+}
+
+.navbar-links ul li ul.dropdown {
+    display: block;
+}
+
+.navbar-links ul li ul.dropdown {
+    width: fit-content;
+    background: var(--bg-header);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.navbar-links ul li:hover ul.dropdown {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    } 
+
+    .navbar-links li a {
+        padding: .5rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar ul li ul li {
+        width: 100%;
+    }
+
+    .portfolio, .hero, .news, .sponsor, .sponsor .wrapp, .sponsor .wrapp .advert, .contact, .portfolio .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero {
+        height: 50vh;
+        background-image: url("/assets/back.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 0 1.5rem 0 0;
+    }
+    
+    .intro p {
+        background: var(--puple);
+        color: var(--text);
+        padding: 1rem;
+        text-align: left;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    
+    .hero button {
+        border: none;
+        background: hsla(207, 9%, 19%, 1);
+        padding: 1rem 2.5rem;
+        font-weight: bolder;
+        color: var(--text);
+        border-radius: .5rem;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 0px 1px var(--puple);
+        position: relative;
+        top: 2rem;
+    }
+
+    .portfolio, .news, .contact {
+        padding: 1.5rem;
+    }
+    
+    .portfolio h1, .news h1, .contact h1 {
+        font-size: 22px;
+        padding-bottom: 2rem;
+    }
+    
+    .portfolio, .sponsor {
+        background: #f1f1f1;
+    }
+    
+    .portfolio .cards {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .portfolio .cards .card {
+        text-align: center;
+    }
+    
+    .portfolio .cards .card i {
+        font-size: 40px;
+        padding-bottom: 1rem;
+    }
+    
+    .portfolio .cards .card h2 {
+        font-size: 18px;
+        padding: .5rem;
+    }
+    
+    .portfolio .cards .card p {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .news-banner {
+        width: 100%;
+        row-gap: 1rem;
+    }
+    
+    .news .news-banner .ban img {
+        width: 300px;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+    
+    .news .news-banner .ban h2 {
+        padding: .3rem .2rem;
+        font-size: 18px;
+    }
+    
+    .news .news-banner .ban p {
+        font-size: 12px;
+        padding: .2rem .8rem;
+    }
+    
+    .news .news-banner .ban a {
+        position: relative;
+        right: -200px;
+        padding-bottom: .5rem;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .sponsor .wrapp {
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+        font-size: 30px;
+    }
+
+    .sponsor .wrapp .advert {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .sponsor .wrapp button {
+        border-radius: 1rem;
+        background: #2b3034;
+        padding: .5rem 1.5rem;
+        color: var(--text);
+        font-weight: bolder;
+        text-transform: capitalize;
+
+    }
+
+    .contact form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: 1rem;
+    }
+
+    .contact input, textarea {
+        padding: .5rem;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 1rem;
+    }
+
+    .names {
+        display: flex;
+        gap: .6rem;
+    }
+
+    .contact input[type="text"] {
+        width: 50%;
+    }
+
+    .contact input[type="submit"] {
+        background: #2b3034;
+        font-weight: bolder;
+        text-transform: uppercase;
+        width: fit-content;
+        padding: 1rem;
+        color: white;
+    }
+
+    .footer {
+        width: 100%;
+        background: #2b3034;
+        color: var(--text);
+        justify-content: end;
+    }
+    
+    .footer p{
+        padding-right: .5rem;
+        padding-top: .5rem;
+        font-size: 10px;
+        color: gray;
+        text-align: end;
+    
+    }
+    
+    .footer p a {
+        color: gray;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    
+    .footer .wrapper {
+        padding: 0 2.5rem 0 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer .wrapper h1 {
+        font-size: 16px;
+        color: grey;
+        padding: 1rem 0;
+    }
+    
+    .footer .wrapper ul {
+        list-style-type: none;
+    }
+    
+    .footer .wrapper a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        padding-left: .5rem;
+    }
+    
+    .footer .wrapper address {
+        padding-left: .5rem;
+    }
+}

@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "target": "es3",
         "watch": true,
         "lib": ["dom", "es2015"]
     }
