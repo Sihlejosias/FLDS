@@ -130,6 +130,11 @@
     background: var(--bg-header);
     color: var(--text);
     font-weight: bolder;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: purple;
 }
 
 .portfolio, .sponsor {
@@ -172,6 +177,75 @@
 .news {
     text-align: center;
     padding: 1rem;
+}
+
+.news .news-banner {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.news .news-banner .ban {
+    padding: .5rem;
+}
+
+.news .news-banner .ban img {
+    width: 400px;
+    height: 200px;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.news .news-banner .ban h2 {
+    font-size: 20px;
+    padding: .3rem 0;
+}
+
+.news .news-banner .ban p {
+    padding: .5rem 0;
+}
+
+.news .news-banner .ban a {
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: right;
+}
+
+.sponsor h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.sponsor .wrapp {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    font-size: 30px;
+}
+
+.sponsor .wrapp .advert {
+    width: 50%;
+    border-right: 1px solid hsla(207, 9%, 19%, .3);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.sponsor .wrapp .donation-btn {
+    display: flex;
+    padding: .5rem 5rem;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sponsor .wrapp .donation-btn button {
+    text-transform: capitalize;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #2b3034;
+    color: white;
 }
 
 @media (max-width: 480px) {
@@ -289,17 +363,16 @@
 
     .news-banner {
         width: 100%;
-        row-gap: 1rem;
+        flex-direction: column;
     }
     
     .news .news-banner .ban img {
         width: 300px;
-        border-top-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
+        border-radius: 1.5rem 1.5rem 0 0;
     }
     
     .news .news-banner .ban h2 {
-        padding: .3rem .2rem;
+        padding: .1rem .1rem;
         font-size: 18px;
     }
     
@@ -309,8 +382,6 @@
     }
     
     .news .news-banner .ban a {
-        /* position: relative;
-        right: -200px; */
         text-align: right;
         width: 100%;
         padding-bottom: .5rem;
