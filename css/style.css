@@ -85,7 +85,7 @@
 }
 
 .navbar-links ul li ul.dropdown {
-    width: 350px;
+    width: 420px;
     background: var(--bg-header);
     opacity: .8;
     position: absolute;
