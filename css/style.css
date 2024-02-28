@@ -84,12 +84,18 @@
 }
 
 .navbar-links ul li ul.dropdown {
-    width: fit-content;
+    width: 350px;
     background: var(--bg-header);
+    opacity: .8;
     position: absolute;
+    right: 0;
     z-index: 999;
     display: none;
     border-radius: 0 0 1rem 1rem;
+}
+
+.navbar-links ul li ul.dropdown a {
+    padding: 1rem;
 }
 
 .navbar-links ul li:hover ul.dropdown {
