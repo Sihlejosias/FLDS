@@ -146,7 +146,7 @@
 }
 
 .portfolio, .sponsor {
-    background: #f1f1f1;
+    background: #ffffff;
     padding: 0 4rem;
 }
 
@@ -184,6 +184,7 @@
 }
 
 .news {
+    background: #e287e20d;
     text-align: center;
     padding: 0 5rem;
 }
@@ -204,7 +205,7 @@
 .news .news-banner .ban img {
     width: 300px;
     height: 200px;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 0rem 0rem 0 0;
 }
 
 .news .news-banner .ban h2 {
@@ -261,6 +262,7 @@
 }
 
 .contact {
+    background: #e287e20d;
     padding: 1rem 5.5rem;
     padding-bottom: 2rem;
 }
