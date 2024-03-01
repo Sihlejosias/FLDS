@@ -85,7 +85,7 @@
 }
 
 .navbar-links ul li ul.dropdown {
-    width: 420px;
+    width: 550px;
     background: var(--bg-header);
     opacity: .8;
     position: absolute;
@@ -236,16 +236,22 @@
 }
 
 .sponsor .wrapp .advert {
-    width: 50%;
-    border-right: 1px solid hsla(207, 9%, 19%, .3);
-    padding: 1rem;
+    width: 100%;
+    /*border-right: 1px solid hsla(207, 9%, 19%, .3); */
+    /* padding: 1rem; */
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 10rem;
 }
 
-.sponsor .wrapp .donation-btn {
+.sponsor .wrapp .advert img {
+    width: 150px;
+    height: 150px;
+}
+
+/* .sponsor .wrapp .donation-btn {
     display: flex;
     padding: .5rem 5rem;
     gap: 3rem;
@@ -259,7 +265,7 @@
     border: none;
     background-color: #2b3034;
     color: white;
-}
+} */
 
 .contact {
     background: #e287e20d;
@@ -339,6 +345,9 @@
     display: none;
 }
 
+body {
+    background: lightgrey;
+}
 
 @media (max-width: 480px) {
     .toggle-btn {
