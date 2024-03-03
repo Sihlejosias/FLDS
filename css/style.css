@@ -153,7 +153,6 @@
 }
 
 .portfolio {
-    text-align: center;
     padding: 1rem 7rem;
 }
 
@@ -187,46 +186,63 @@
 
 .news {
     background: #e287e20d;
-    text-align: center;
     padding: 0 7rem;
 }
 
-.news h1 {
-    padding: .5rem;
-}
-
-.news .news-banner {
+.news .title {
     display: flex;
-    gap: 1rem;
+    gap: .4rem;
 }
 
-.news .news-banner .ban {
+.news .title .v {
+    padding-top: .5rem;
+}
+
+.news .title a {
+    font-size: 10px;
+    padding-top: .9rem;
+}
+
+.news .news-banners {
+    display: flex;
+    gap: .5rem;
+}
+
+.news .news-banners .banner {
+    display: flex;
+    gap: .1rem;
+} 
+
+.news .news-banners .ban {
     padding: .5rem;
 }
 
-.news .news-banner .ban img {
+.news .news-banners .ban img {
     width: 300px;
     height: 200px;
     border-radius: 0rem 0rem 0 0;
 }
 
-.news .news-banner .ban h2 {
+.news .news-banners .ban h2 {
     font-size: 20px;
     padding: .3rem 0;
 }
 
-.news .news-banner .ban p {
+.news .news-banners .ban p {
     padding: .5rem 0;
 }
 
-.news .news-banner .ban a {
+.news .news-banners .ban a {
     text-decoration: none;
     text-transform: capitalize;
     text-align: right;
 }
 
+.news .news-banners .calender {
+    
+}
+
 .sponsor h1 {
-    text-align: center;
     padding: 1rem;
 }
 
@@ -301,7 +317,6 @@
     border-radius: .5rem;
     padding: .3rem;
     background: #f1f1f1;
-    text-transform: capitalize;
     width: 380px;
     position: relative;
     top: .5rem;
@@ -311,7 +326,7 @@
     position: relative;
     top: 1rem;
     resize: none;
-}
+ }
 
 .contact input[type="submit"] {
     background: #2b3034;
@@ -322,8 +337,13 @@
     color: white;
     position: relative;
     top: 1.5rem;
+    border: none;
     border-radius: .5rem;
     cursor: pointer;
+}
+
+.contact input, .contact textarea {
+    outline: 1px dotted rebeccapurple;
 }
 
 .names {
