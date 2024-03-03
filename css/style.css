@@ -238,8 +238,32 @@
     text-align: right;
 }
 
-.news .news-banners .calender {
-    
+.news .news-banners .eve {
+    padding: 1rem;
+    display: flex;
+}
+
+.calender {
+    width: 30%;
+}
+
+.news .news-banners .eve h3 {
+    font-size: 14px;
+    padding: .5rem;
+}
+
+.news .news-banners .eve .date {
+    padding: 1.5rem 1rem;
+    background: var(--puple);
+    font-weight: bolder;
+}
+
+.news .news-banners .eve .dit {
+    padding-left: 1rem;
+}
+
+.news .news-banners .eve .dit i {
+    padding-right: .5rem;
 }
 
 .sponsor h1 {
