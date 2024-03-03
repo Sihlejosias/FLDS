@@ -138,6 +138,8 @@
     background: var(--bg-header);
     color: var(--text);
     font-weight: bolder;
+    border: none;
+    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -152,7 +154,7 @@
 
 .portfolio {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 7rem;
 }
 
 .portfolio h1 {
@@ -186,7 +188,7 @@
 .news {
     background: #e287e20d;
     text-align: center;
-    padding: 0 5rem;
+    padding: 0 7rem;
 }
 
 .news h1 {
@@ -236,25 +238,25 @@
 }
 
 .sponsor .wrapp .advert {
-    width: 100%;
-    /*border-right: 1px solid hsla(207, 9%, 19%, .3); */
-    /* padding: 1rem; */
+    width: 50%;
+    border-right: 1px solid hsla(207, 9%, 19%, .3);
+    padding: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: 5rem;
 }
 
 .sponsor .wrapp .advert img {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
 }
 
-/* .sponsor .wrapp .donation-btn {
+.sponsor .wrapp .donation-btn {
     display: flex;
     padding: .5rem 5rem;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -264,12 +266,13 @@
     border-radius: 1rem;
     border: none;
     background-color: #2b3034;
+    cursor: pointer;
     color: white;
-} */
+}
 
 .contact {
     background: #e287e20d;
-    padding: 1rem 5.5rem;
+    padding: 1rem 7.5rem;
     padding-bottom: 2rem;
 }
 
@@ -307,6 +310,7 @@
 .contact textarea {
     position: relative;
     top: 1rem;
+    resize: none;
 }
 
 .contact input[type="submit"] {
@@ -319,6 +323,7 @@
     position: relative;
     top: 1.5rem;
     border-radius: .5rem;
+    cursor: pointer;
 }
 
 .names {
