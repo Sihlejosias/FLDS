@@ -27,7 +27,7 @@ navItems.forEach(item => {
         }
     });
 
-    item.addEventListener('mouseleave', () => { // Use mouseleave instead of mouseout
+    item.addEventListener('mouseleave', () => { 
         if (!isDropdownOpen) {
             const dropdown = item.querySelector('ul');
             if (dropdown) {
@@ -55,15 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
 
-    if (carouselContainer && prevButton && nextButton) { // Check if elements exist
+    if (carouselContainer && prevButton && nextButton) { 
         prevButton.addEventListener('click', () => {
-            carouselContainer.scrollLeft -= 200; // Adjust scroll amount as needed
+            carouselContainer.scrollLeft -= 200;
         });
 
         nextButton.addEventListener('click', () => {
-            carouselContainer.scrollLeft += 200; // Adjust scroll amount as needed
+            carouselContainer.scrollLeft += 200; 
         });
     } else {
-        console.error("Carousel elements not found!"); // Handle missing elements
+        console.error("Carousel elements not found!"); 
     }
 });

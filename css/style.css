@@ -1,12 +1,12 @@
     /* style.css */
     * {font-family: 'Arial';}
 
-    body {3
+    body {
     font-family: 'Arial';
-    margin: 0 auto; /* Center the body horizontally */
+    margin: 0 auto; 
     padding: 0;
     color: #333;
-    width: 100%; /* Occupy 90% of the screen width */
+    width: 100%; 
 }
 
 header {
@@ -20,43 +20,43 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Stack header elements */
-    align-items: flex-start; /* Align to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
     text-transform: capitalize;
 
 }
 
-.header-left { /* Contains organization name and subtitle */
+.header-left { 
     display: block;
     margin-bottom: 10px;
 }
 
 nav.header-right {
-    width: 100%; /* Make the nav take full width below header-left */
-    text-align: left; /* Align nav items to the left */
+    width: 100%; 
+    text-align: left; 
     padding-left: 300px;
 }
 
-nav ul { /* Styles for the top-level <ul> (main nav) */
+nav ul { 
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav li { /* Styles for the top-level <li> (main nav items) */
+nav li { 
     margin-right: 20px;
     position: relative;
 }
 
-nav > ul > li > a { /* Styles ONLY for the top-level <a> elements */
+nav > ul > li > a { 
     color: white;
     text-decoration: none;
     padding: 5px 10px;
 }
 
 nav ul ul {
-    display: none; /* Initially hidden */
+    display: none; 
     position: absolute;
     background-color: purple;
     top: 100%;
@@ -72,25 +72,24 @@ nav ul ul li {
 }
 
 
-nav ul ul li a { /* Styles for the dropdown <a> elements */
+nav ul ul li a { 
     color: white;
     text-decoration: none;
     padding: 5px 10px;
     display: block;
-    transition: background-color 0.2s ease; /* Add transition for background color */
+    transition: background-color 0.2s ease; 
 }
 
-nav ul ul li a:hover { /* Hover effect for dropdown links */
-    background-color: #9933CC; /* Slightly darker purple on hover */
+nav ul ul li a:hover { 
+    background-color: #9933CC; 
 }
 
-/* Corrected hover and focus styles - More Robust */
+
 nav li:hover > ul,
-nav li:focus-within > ul { /* Direct child <ul> on hover/focus */
+nav li:focus-within > ul { 
     display: block;
 }
 
-/* Sticky Navigation Styles */
 nav.sticky {
     position: fixed;
     top: 0;
@@ -102,8 +101,8 @@ nav.sticky {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Crucial Change: Target ONLY the top-level <ul> for sticky */
-nav.sticky > ul {  /* Direct child <ul> of the sticky nav */
+
+nav.sticky > ul { 
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -111,13 +110,12 @@ nav.sticky > ul {  /* Direct child <ul> of the sticky nav */
     align-items: center;
 }
 
-/* Sticky styles for the top-level list items and links */
-nav.sticky > ul > li { /* Direct child <li> of the sticky <ul> */
+nav.sticky > ul > li { 
     margin-right: 20px;
     position: relative;
 }
 
-nav.sticky > ul > li > a { /* Direct child <a> of the sticky <li> */
+nav.sticky > ul > li > a { 
     color: white;
     text-decoration: none;
     padding: 5px 10px;
@@ -127,8 +125,7 @@ nav.sticky > ul > li > a { /* Direct child <a> of the sticky <li> */
     position: relative;
     height: 500px;
     overflow: hidden;
-    width: 100%; /* Hero spans full width */
-}
+    width: 100%;
 
 .hero img {
     width: 100%;
@@ -141,7 +138,7 @@ nav.sticky > ul > li > a { /* Direct child <a> of the sticky <li> */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 20px;
     text-align: center;
     color: #333;
@@ -153,12 +150,12 @@ nav.sticky > ul > li > a { /* Direct child <a> of the sticky <li> */
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .hero button:hover {
-    background-color: #9933CC; /* Slightly darker purple on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #9933CC; 
+    transform: scale(1.05); 
 }
 
 section {
@@ -168,15 +165,15 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray background for even sections */
+    background-color: #f2f2f2; 
 }
 
 .card-container {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    grid-gap: 20px; /* Spacing between grid items */
-    justify-content: center; /* Center the grid horizontally */
-    align-items: start; /* Align items to the top of the grid cell */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-gap: 20px; 
+    justify-content: center; 
+    align-items: start; 
 }
 
 .card {
@@ -186,12 +183,12 @@ section:nth-child(even) {
     padding: 20px;
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    /* Remove fixed width */
-    width: auto; /* Let the card width be determined by its content */
+    
+    width: auto; 
 }
 
 .card:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); 
 }
 
 
@@ -199,14 +196,14 @@ section:nth-child(even) {
     max-width: 100%;
     height: 200px;
     width: 100%;
-    border-radius: 4px; /* Round image corners */
-    margin-bottom: 10px; /* Add some space below the image */
+    border-radius: 4px; 
+    margin-bottom: 10px; 
 }
 
 .collaborators {
-    transform: translateY(-5px); /* Move card up slightly on hover */
-    overflow: hidden; /* Hide content that overflows the container */
-    position: relative; /* Needed for positioning controls */
+    transform: translateY(-5px); 
+    overflow: hidden; 
+    position: relative; 
 }
 
 .collaborators .wrapp .donation-btn {
@@ -217,37 +214,37 @@ section:nth-child(even) {
     }
 
 .carousel-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
-    padding: 20px; /* Add some padding around the carousel */
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch; 
+    padding: 20px; 
 }
 
 .carousel {
-    display: flex; /* Arrange slides horizontally */
+    display: flex;
 }
 
 .slide {
-    flex: 0 0 150px; /* Adjust slide width as needed */
-    margin-right: 20px; /* Spacing between slides */
+    flex: 0 0 150px; 
+    margin-right: 20px; 
     display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
-    transform: translateY(-5px); /* Move card up slightly on hover */
+    justify-content: center; 
+    align-items: center; 
+    transform: translateY(-5px); 
 
 }
 
 .slide img {
     max-width: 100%;
     height: auto;
-    display: block; /* Prevents small vertical spacing below image */
+    display: block; 
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    /* Remove fixed width */
+    
     width: 100%;
     height: 80%;
     
@@ -257,12 +254,12 @@ section:nth-child(even) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.116); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.116); 
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    z-index: 1; /* Ensure controls are above the carousel */
+    z-index: 1; 
 }
 
 .prev {
@@ -273,14 +270,14 @@ section:nth-child(even) {
     right: 5px;
 }
 
-/* Hide scrollbar, but keep the scrolling functionality */
+
 .carousel-container::-webkit-scrollbar {
     display: none;
 }
 
 .carousel-container {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
 }
 
 .icon-container i {
@@ -289,11 +286,11 @@ section:nth-child(even) {
 
 
 .email-us form {
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px; 
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    gap: 10px; /* Add some spacing between form elements */
+    flex-direction: column; 
+    gap: 10px; 
 }
 
 .email-us form input,
@@ -301,13 +298,13 @@ section:nth-child(even) {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in width */
-    font-size: 16px; /* Make form elements larger for better usability */
+    box-sizing: border-box; 
+    font-size: 16px; 
 }
 
 .email-us form textarea {
-    height: 150px; /* Adjust height as needed */
-    resize: vertical; /* Allow vertical resizing of textarea */
+    height: 150px; 
+    resize: vertical; 
 }
 
 .email-us form button {
@@ -318,7 +315,7 @@ section:nth-child(even) {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    align-self: center; /* Center the button */
+    align-self: center; 
 }
 
 footer {
@@ -327,4 +324,5 @@ footer {
     color: white;
     text-align: center;
     font-size: 12px;
+}
 }
