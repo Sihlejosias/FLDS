@@ -1,661 +1,330 @@
-*, *::before, *::after {padding: 0; margin: 0; box-sizing: border-box;}
+    /* style.css */
+    * {font-family: 'Arial';}
 
-:root {
-    --text: #fff;
-    --bg-header: hsl(207, 9%, 19%);
-    --black-withop: hsl(0, 0%, 0%, .7);
-    --puple: hsla(282, 80%, 63%, .9);
+    body {3
+    font-family: 'Arial';
+    margin: 0 auto; /* Center the body horizontally */
+    padding: 0;
+    color: #333;
+    width: 100%; /* Occupy 90% of the screen width */
 }
 
-.navbar {
+header {
+    background-color: purple;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--bg-header);
-    color: var(--text);
-    padding: 0 5rem;
-}
-
-.title {
-    margin: 1rem 1.5rem;
-    display: flex;
-}
-
-.title img {
-    width: 50px;
-    height: 50px;
-}
-
-.name {
-    padding: 0 .5rem;
-    margin: .7rem 0;
-}
-
-.name h1 {
-    font-size: 16px;
-    font-weight: bolder;
+    flex-direction: column; /* Stack header elements */
+    align-items: flex-start; /* Align to the left */
     text-transform: capitalize;
+
 }
 
-.name h2 {
-    font: 12px normal;
+.header-left { /* Contains organization name and subtitle */
+    display: block;
+    margin-bottom: 10px;
 }
 
-.navbar-links ul {
+nav.header-right {
+    width: 100%; /* Make the nav take full width below header-left */
+    text-align: left; /* Align nav items to the left */
+    padding-left: 300px;
+}
+
+nav ul { /* Styles for the top-level <ul> (main nav) */
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.navbar-links li {
-    list-style: none;
+nav li { /* Styles for the top-level <li> (main nav items) */
+    margin-right: 20px;
+    position: relative;
 }
 
-.navbar-links li a {
+nav > ul > li > a { /* Styles ONLY for the top-level <a> elements */
+    color: white;
     text-decoration: none;
-    color: #fff;
-    padding: 2rem;
-    display: block;
+    padding: 5px 10px;
 }
 
-.navbar-links li a:hover {
-    color: hsla(300, 100%, 25%, 1);
-}
-
-.toggle-btn {
+nav ul ul {
+    display: none; /* Initially hidden */
     position: absolute;
-    top: 2rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    background-color: purple;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.toggle-btn .bar {
-    background-color: var(--text);
-    border-radius: 10px;
-    height: 3px;
+nav ul ul li {
+    margin: 0;
+    display: block;
     width: 100%;
 }
 
-.navbar-links ul li ul.dropdown {
+
+nav ul ul li a { /* Styles for the dropdown <a> elements */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.2s ease; /* Add transition for background color */
+}
+
+nav ul ul li a:hover { /* Hover effect for dropdown links */
+    background-color: #9933CC; /* Slightly darker purple on hover */
+}
+
+/* Corrected hover and focus styles - More Robust */
+nav li:hover > ul,
+nav li:focus-within > ul { /* Direct child <ul> on hover/focus */
     display: block;
 }
 
-.navbar-links ul li ul.dropdown {
-    width: 550px;
-    background: var(--bg-header);
-    opacity: .8;
-    position: absolute;
-    right: 0;
-    z-index: 999;
-    display: none;
-    border-radius: 0 0 1rem 1rem;
+/* Sticky Navigation Styles */
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: purple;
+    z-index: 100;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-links ul li ul.dropdown a {
-    padding: 1rem;
+/* Crucial Change: Target ONLY the top-level <ul> for sticky */
+nav.sticky > ul {  /* Direct child <ul> of the sticky nav */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.navbar-links ul li:hover ul.dropdown {
-    display: block;
+/* Sticky styles for the top-level list items and links */
+nav.sticky > ul > li { /* Direct child <li> of the sticky <ul> */
+    margin-right: 20px;
+    position: relative;
+}
+
+nav.sticky > ul > li > a { /* Direct child <a> of the sticky <li> */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
 }
 
 .hero {
-    height: 75vh;
-    background: url("../assets/back.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 0 1.5rem 0 0;
-    filter: blur(2px);
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    width: 100%; /* Hero spans full width */
 }
 
-.intro p {
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
     position: absolute;
-    top: 15rem;
-    padding:  2rem;
-    background: hsla(300, 100%, 25%, .6);
-    border-radius: 0 1rem 1rem 0;
-    padding-left: 12rem;
-    font-size: 17px;
-    color: var(--text);
-    left: 0;
-    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    text-align: center;
+    color: #333;
 }
 
-.intro .t {
-    display: inline-block;
-}
-
-.btn button {
-    position: absolute;
-    top: 25rem;
-    left: 15rem;
-    padding: .6rem 5rem;
-    text-transform: capitalize;
-    background: var(--bg-header);
-    color: var(--text);
-    font-weight: bolder;
+.hero button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition */
 }
 
 .hero button:hover {
-    background: purple;
+    background-color: #9933CC; /* Slightly darker purple on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-.portfolio, .sponsor {
-    background: #ffffff;
-    padding: 0 4rem;
+section {
+    padding: 40px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.portfolio {
-    padding: 1rem 7rem;
+section:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even sections */
 }
 
-.portfolio h1 {
-    text-transform: capitalize;
-    padding-bottom: 1rem;
+.card-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    grid-gap: 20px; /* Spacing between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: start; /* Align items to the top of the grid cell */
 }
 
-.portfolio .cards {
-    display: flex;
-    justify-content: space-evenly;
-    padding: .3rem;
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Remove fixed width */
+    width: auto; /* Let the card width be determined by its content */
 }
 
-.portfolio .cards .card {
-    padding: .5rem;
+.card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
-.portfolio .cards .card i {
-    font-size: 35px;
-}
 
-.portfolio .cards .card h2 {
-    padding: 1rem 0;
-    font-size: 18px;
-}
-
-.portfolio .cards .card p {
-    font-size: 14px;
-}
-
-.news {
-    background: #e287e20d;
-    padding: 0 7rem;
-}
-
-.news .title {
-    display: flex;
-    gap: .4rem;
-}
-
-.news .title .v {
-    padding-top: .5rem;
-}
-
-.news .title a {
-    font-size: 10px;
-    padding-top: .9rem;
-}
-
-.news .news-banners {
-    display: flex;
-    gap: .5rem;
-}
-
-.news .news-banners .banner {
-    display: flex;
-    gap: .1rem;
-} 
-
-.news .news-banners .ban {
-    padding: .5rem;
-}
-
-.news .news-banners .ban img {
-    width: 300px;
+.card img {
+    max-width: 100%;
     height: 200px;
-    border-radius: 0rem 0rem 0 0;
-}
-
-.news .news-banners .ban h2 {
-    font-size: 20px;
-    padding: .3rem 0;
-}
-
-.news .news-banners .ban p {
-    padding: .5rem 0;
-}
-
-.news .news-banners .ban a {
-    text-decoration: none;
-    text-transform: capitalize;
-    text-align: right;
-}
-
-.news .news-banners .eve {
-    padding: 1rem;
-    display: flex;
-}
-
-.calender {
-    width: 30%;
-}
-
-.news .news-banners .eve h3 {
-    font-size: 14px;
-    padding: .5rem;
-}
-
-.news .news-banners .eve .date {
-    padding: 1.5rem 1rem;
-    background: var(--puple);
-    font-weight: bolder;
-}
-
-.news .news-banners .eve .dit {
-    padding-left: 1rem;
-}
-
-.news .news-banners .eve .dit i {
-    padding-right: .5rem;
-}
-
-.sponsor h1 {
-    padding: 1rem;
-}
-
-.sponsor .wrapp {
     width: 100%;
-    display: flex;
-    padding: 1rem;
-    font-size: 30px;
+    border-radius: 4px; /* Round image corners */
+    margin-bottom: 10px; /* Add some space below the image */
 }
 
-.sponsor .wrapp .advert {
-    width: 50%;
-    border-right: 1px solid hsla(207, 9%, 19%, .3);
-    padding: 1rem;
-    display: flex;
-    gap: 3rem;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+.collaborators {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    overflow: hidden; /* Hide content that overflows the container */
+    position: relative; /* Needed for positioning controls */
 }
 
-.sponsor .wrapp .advert img {
-    width: 50px;
-    height: 50px;
-}
-
-.sponsor .wrapp .donation-btn {
-    display: flex;
-    padding: .5rem 5rem;
-    gap: 2rem;
-    align-items: center;
-}
-
-.sponsor .wrapp .donation-btn button {
-    text-transform: capitalize;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    background-color: #2b3034;
-    cursor: pointer;
-    color: white;
-}
-
-.contact {
-    background: #e287e20d;
-    padding: 1rem 7.5rem;
-    padding-bottom: 2rem;
-}
-
-.contact h1 {
-    text-transform: capitalize;
-    padding-bottom: 1rem;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    width: 40%;
-}
-
-.contact input[type="text"] {
-    border-radius: .5rem;
-    background: #f1f1f1;
-    padding: .3rem;
-    text-transform: capitalize;
-    border: none;
-}
-
-.contact input[type="email"], textarea {
-    border: none;
-    border-radius: .5rem;
-    padding: .3rem;
-    background: #f1f1f1;
-    width: 380px;
-    position: relative;
-    top: .5rem;
-}
-
-.contact textarea {
-    position: relative;
-    top: 1rem;
-    resize: none;
- }
-
-.contact input[type="submit"] {
-    background: #2b3034;
-    font-weight: bolder;
-    text-transform: uppercase;
-    width: fit-content;
-    padding: .5rem;
-    color: white;
-    position: relative;
-    top: 1.5rem;
-    border: none;
-    border-radius: .5rem;
-    cursor: pointer;
-}
-
-.contact input, .contact textarea {
-    outline: 1px dotted rebeccapurple;
-}
-
-.names {
-    padding: .5rem 0;
-    gap: 2rem;
-}
-
-.footer {
-    width: 100%;
-    background: #2b3034;
-    color: var(--text);
-    padding: 0 7rem;
-    text-align: end;
-    font-size: 12px;
-    color: var(--text);
-}
-
-.footer a{
-    color: var(--text);
-    text-decoration: none;
-}
-
-.footer .wrapper {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-bottom: 1rem;
-}
-
-.footer .wrapper .subnav, .footer .wrapper .media {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.footer .wrapper .contabct-link i {
-    padding: 0 .4rem;
-    font-size: 16px;
-    padding-bottom: .5rem;
-}
-
-.footer .wrapper .contabct-link button {
-    padding: .5rem;
-    text-transform: capitalize;
-    background: var(--puple);
-    color: var(--black-withop);
-    border: none;
-    border-radius: 1rem;
-    font-weight: bolder;
-}
-
-.footer .wrapper .subnav h1, .footer .wrapper .media h1, .footer .wrapper .contabct-link h1{
-    padding-bottom: 1rem;
-}
-
-body {
-    background: lightgrey;
-}
-
-@media (max-width: 480px) {
-    .toggle-btn {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-    .hero {
-        height: 50vh;
-    }
-
-
-    .hero .t {
-        display: none;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    } 
-
-    .navbar-links li a {
-        padding: .5rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .navbar-links ul li ul {
-        position: relative;
-        width: 100%;
-    }
-
-    .navbar ul li ul li {
-        width: 100%;
-    }
-
-    .portfolio, .hero, .news, .sponsor, .sponsor .wrapp, .sponsor .wrapp .advert, .contact, .portfolio .cards {
-        display: flex;
-        flex-direction: column;
+.collaborators .wrapp .donation-btn {
+        gap: 1rem;
+        padding: .5rem 2rem;
         justify-content: center;
         align-items: center;
     }
-    
-    .intro p {
-        position: static;
-        background: var(--puple);
-        color: var(--text);
-        padding: 1rem;
-        text-align: left;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-    }
-    
-    .hero button {
-        border: none;
-        background: hsla(207, 9%, 19%, 1);
-        padding: 1rem 2.5rem;
-        font-weight: bolder;
-        color: var(--text);
-        border-radius: .5rem;
-        text-transform: uppercase;
-        box-shadow: 0px 0px 0px 1px var(--puple);
-        position: relative;
-        top: 2rem; 
-        left: -2.5rem;
-    }
 
-    .portfolio, .news, .contact {
-        padding: 1.5rem;
-    }
-    
-    .portfolio h1, .news h1, .contact h1 {
-        font-size: 22px;
-        padding-bottom: 2rem;
-    }
-    
-    .portfolio .cards {
-        flex-direction: row;
-        gap: 1rem;
-    }
-    
-    .portfolio .cards .card {
-        text-align: center;
-    }
-    
-    .portfolio .cards .card i {
-        font-size: 40px;
-        padding-bottom: 1rem;
-    }
-    
-    .portfolio .cards .card h2 {
-        font-size: 18px;
-        padding: .5rem;
-    }
-    
-    .portfolio .cards .card p {
-        text-align: left;
-        font-size: 14px;
-    }
+.carousel-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
+    padding: 20px; /* Add some padding around the carousel */
+}
 
-    .news-banner {
-        flex-direction: column;
-    }
-    
-    .news .news-banner .ban img {
-        width: 300px;
-        border-radius: 1.5rem 1.5rem 0 0;
-    }
-    
-    .news .news-banner .ban h2 {
-        padding: .05rem;
-        font-size: 18px;
-    }
-    
-    .news .news-banner .ban p {
-        font-size: 12px;
-        padding: .1rem .8rem;
-    }
-    
-    .news .news-banner .ban a {
-        text-align: right;
-        padding-bottom: .5rem;
-        text-decoration: none;
-        font-size: 14px;
-    }
+.carousel {
+    display: flex; /* Arrange slides horizontally */
+}
 
-    .sponsor .wrapp {
-        width: 90%;
-        padding: 1rem;
-        font-size: 25px;
-    }
+.slide {
+    flex: 0 0 150px; /* Adjust slide width as needed */
+    margin-right: 20px; /* Spacing between slides */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    transform: translateY(-5px); /* Move card up slightly on hover */
 
-    .sponsor .wrapp .advert {
-        width: 100%;
-        border: none;
-        justify-content: space-between;
-        flex-direction: row;
-    }
+}
 
-    .sponsor .wrapp .donation-btn {
-        gap: 1rem;
-        padding: .5rem 2rem;
-    }
-
-    .contact {
-        padding-bottom: 2rem;
-    }
-
-    .contact form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact input, textarea {
-        padding: .5rem;
-        border: none;
-        background: #f1f1f1;
-        border-radius: .5rem;
-    }
-
-    textarea, .contact input[type="email"] {
-        width: 280px;
-    }
-
-    .contact input[type="text"] {
-        width: 43%;
-    }
-
-    .footer {
-        justify-content: end;
-    }
+.slide img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents small vertical spacing below image */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Remove fixed width */
+    width: 100%;
+    height: 80%;
     
-    /* .footer p{
-        padding-right: .5rem;
-        padding-top: .5rem;
-        font-size: 10px;
-        color: gray;
-        text-align: end;
-    
-    }
-    
-    .footer p a {
-        color: gray;
-        text-decoration: none;
-        text-transform: capitalize;
-    }
-     */
-    .footer .wrapper {
-        padding: 0 2.5rem 0 4rem;
-        display: none;
-        justify-content: space-between;
-    }
+}
 
-    .footer .wrapper .right {
-        flex-direction: column;
-    }
-    
-    .footer .wrapper h1 {
-        font-size: 16px;
-        color: grey;
-        padding: 1rem 0;
-    }
-    
-    .footer .wrapper ul {
-        list-style-type: none;
-    }
-    
-    .footer .wrapper a {
-        color: #fff;
-        text-decoration: none;
-        text-transform: capitalize;
-        padding-left: .5rem;
-    }
-    
-    .footer .wrapper address {
-        padding-left: .5rem;
-    }
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.116); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1; /* Ensure controls are above the carousel */
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+/* Hide scrollbar, but keep the scrolling functionality */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.icon-container i {
+    font-size: 5em;
+}
+
+
+.email-us form {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 10px; /* Add some spacing between form elements */
+}
+
+.email-us form input,
+.email-us form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px; /* Make form elements larger for better usability */
+}
+
+.email-us form textarea {
+    height: 150px; /* Adjust height as needed */
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.email-us form button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center; /* Center the button */
+}
+
+footer {
+    width: 100%;
+    background: #2b3034;
+    color: white;
+    text-align: center;
+    font-size: 12px;
 }
