@@ -166,13 +166,15 @@ button {
 
 section {
     padding: 40px;
-    /* max-width: 960px; */
     margin: 0 auto;
 }
 
-.projects, .newswrap {
+.projects, .events, .contacts {
     max-width: 960px;
+}
 
+.newswrap, .collaboratorswrap {
+    padding-left: 190px;
 }
 
 section:nth-child(even) {
