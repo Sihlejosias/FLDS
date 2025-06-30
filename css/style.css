@@ -356,6 +356,10 @@ footer .wrapper a:hover {
     text-decoration: underline;
 }
 
+footer .wrapper h1 {
+    padding: 5px 0;
+}
+
 footer .copyright {
     text-align: center;
 }
