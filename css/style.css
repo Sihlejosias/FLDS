@@ -1,4 +1,4 @@
-    /* style.css */
+/* style.css */
 *, *::before, *::after {
     font-family: 'Arial';
     box-sizing: border-box;
@@ -122,16 +122,17 @@ nav.sticky > ul > li {
 
 .hero {
     position: relative;
-    height: 500px;
+    height: 85vh;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
+    padding: 10px;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: .5rem;
 }
 
 .hero-content {
@@ -139,7 +140,7 @@ nav.sticky > ul > li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     text-align: center;
     color: #333;
@@ -161,10 +162,17 @@ button {
     transform: scale(1.05); 
 }
 
+
+
 section {
     padding: 40px;
-    max-width: 960px;
+    /* max-width: 960px; */
     margin: 0 auto;
+}
+
+.projects, .newswrap {
+    max-width: 960px;
+
 }
 
 section:nth-child(even) {
@@ -254,7 +262,6 @@ section:nth-child(even) {
 .carousel-control {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.116); 
     color: white;
     border: none;
@@ -325,9 +332,38 @@ section:nth-child(even) {
 }
 
 footer {
-    width: 100%;
-    background: #2b3034;
     color: white;
-    text-align: center;
+    background: #2b3034;
     font-size: 12px;
+    width: 100%;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .wrapper a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+footer .wrapper a:hover {
+    color: #9933CC;
+    text-decoration: underline;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    color: #9933CC;
+    text-decoration: underline;
 }

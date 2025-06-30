@@ -1,3 +1,11 @@
+const footer = document.querySelector('footer');
+
+const year = new Date().getFullYear();
+const company_name = 'I am a Future Leader';
+
+footer.innerHTML += `
+<div class="copyright"><p>&copy; ${year} ${company_name}. All rights reserved. <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p></div>`;
+
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 100) {

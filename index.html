@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage | FLDP</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
     <header>
@@ -77,7 +77,7 @@
                     <p>Est cumque maiores in maxime aperiam est laboriosam tempora rem dolorum incidunt.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-hands"></i>
+                    <i class="fa-solid fa-hands"></i>
                     <h2>Engagements</h2>
                     <p>Aut enim reiciendis et explicabo rerum non optio beatae.</p>
                 </div>
@@ -90,19 +90,21 @@
     </section>
 
     <section class="news">
-        <h2>News</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="./assets/News1.png" alt="First update"></img>
-                <h2>Lorem ipsum dolor sit amet.</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quaerat reprehenderit quidem nam quam reiciendis!</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="card">
-                <img src="./assets/News2.png" alt="Second update">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, veniam aperiam et dolorum reprehenderit aspernatur!</p>
-                <a href="#">Read More</a>
+        <div class="newswrap">
+            <h2>News</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./assets/News1.png" alt="First update"></img>
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quaerat reprehenderit quidem nam quam reiciendis!</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="card">
+                    <img src="./assets/News2.png" alt="Second update">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, veniam aperiam et dolorum reprehenderit aspernatur!</p>
+                    <a href="#">Read More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -190,7 +192,7 @@
         </div>
     </footer>
     
-    <script>
+    <!-- <script>
         const footer = document.querySelector('footer');
 
         const year = new Date().getFullYear();
@@ -198,7 +200,7 @@
 
         footer.innerHTML += `
         <p>&copy; ${year} ${company_name}. All rights reserved. <a href="#">Privacy</a> | <a href="#">Terms of Use</a></p>`;
-    </script>
+    </script> -->
 
     <script src="js/script.js"></script>
 </body>
